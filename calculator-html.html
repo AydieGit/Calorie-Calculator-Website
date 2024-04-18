@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="index.css" >
+</head>
+<body>
+
+     <h1>Kalkulator kalorii</h1>
+
+    <div id="workingplace">
+       
+
+        <div id="calculator">
+            <!-- TEXT -->
+            <h2>Calorie Calculator</h2>
+
+            
+            <!-- Input area -->
+            <br><hr/>
+            <p>Please fill the fields: </p>
+            <input type="number" id="kgEntry"  placeholder="Weight(Kg)"><br>
+            <input type="number" id="cmEntry"   placeholder="Heigh(Cm)"><br>
+            <input type="number" id="ageEntry" placeholder="Age"><br><br>
+            <!-- Select area -->
+            
+            <label for="gender">Gender:</label>
+            <select name="gender" id="genderEntry">
+
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select><br><br>
+            <!-- Select area -->
+            
+            <label for="activityLevel">Activity Level:</label>
+            <select name="activityLevel" id="activityLevel" >
+
+                <option value="sedentary">Sedentary (little or no exercise)</option>
+                <option value="lightlyActive">Lightly Active (light exercise / sports 1-3 days a week)</option>
+                <option value="moderatelyActive">Moderately Active(moderate exercise / sports 3-5 days a week)</option>
+                <option value="veryActive">Very Active(hard exercise / sports 6-7 days a week)</option>
+                <option value="extraActive">Extra Active(very hard exercise / sports & physical job or 2x training)</option>
+            </select>
+            
+  
+            <!-- Submit-->
+            <br><br>
+            <button type="submit" id="submit">Submit</button>
+
+        </div>
+
+        <div id="output">
+            <!-- TEXT -->
+            <h2> Maintenance Calorie</h2><br><hr/>
+            <p>To maintain mass you should calorie intake sould be: </p>
+            <p id="endResult">...</p>
+            <p>To gain mass your caloire intake should be: </p>
+            <p id="gainmass">...</p>
+            <p>To reduce mass your caloire intake should be: </p>
+            <p id="losemass">...</p>
+        </div>
+        
+        
+
+    </div>
+    <div id="endText">
+        <hr/><h3 class="center">How we calcualte</h3>
+        <p class="center">Base Metabolic rate (BMR)</p>
+        <p class="center">10 * weight (kg) + 6.25 * height(cm) - 5 * age(y) + 5 for (man)</p>
+        <p class="center">10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161 for (woman)</p>
+        <br>
+
+        <p class="center">To determin​e your total daily calorie needs, multiply your BMR by the appropriate activity factor, as follows:</p>
+        <ul>
+            <li>If you are sedentary (little or no exercise) : Calorie-Calculation = BMR x 1.2</li>
+            <li>If you are lightly active (light exercise/sports 1-3 days​/week) : Calorie-Calculation = BMR x 1.375</li>
+            <li>If you are moderately active (moderate exercise/sports 3-5 days/week) : Calorie-Calculation = BMR x 1.55</li>
+            <li>If you are very active (hard exercise/sports 6-7 days a week) : Calorie-Calculation = BMR x 1.725</li>
+            <li>If you are extra active (very hard exercise/sports & physical job or 2x training) : Calorie-Calculation = BMR x 1.9</li>
+        </ul>
+        <p class="center">For example If you are sedentary, and your BMR equal 1745 so the total number of calories you need in order to maintain your current weight = 1745*1.2 = 2094.</p>
+
+    </div>
+
+    
+
+
+    <script src="index.js"></script>
+</body>
+</html>
